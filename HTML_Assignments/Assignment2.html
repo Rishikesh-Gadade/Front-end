@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    <title>Medical Survey</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        border: 5px solid white;
+        color: white;
+        background: #0d031f;
+    }
+    .form_1 {
+        
+        float: left;
+        border: 5px solid white;
+        color: black;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 10px;
+        
+    }
+    .image {
+        float: right;
+        
+        background:white;
+    }
+    input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+</style>
+<script>
+    function myFunction() {
+      document.getElementById("note").innerHTML = "Thank you for your response";
+          
+    }
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
+<body background="/Assignments/planks-dark-old-wood-texture-background-170515350.jpg">
+    <form action="process.php" class="form_1" >
+        <h1>Medical Survey</h1>
+        <h3>Contact Details</h3>
+        <div class="image">
+            <input type='file' onchange="readURL(this);" />
+            <img id="blah" src="#" alt="your image" />
+
+        </div>
+        
+        
+        <div id="name">
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="e.g John Mclane" required><br>
+        </div>
+        <div id="email">
+            <label for="email" ></label>Email_id<br>
+            <input type="email" placeholder="e.g yourname@website.com"><br>
+        </div>
+        <div id="phone_no">
+            <label for="phone_no">Phone number</label><br>
+            <input type="tel" placeholder="00000 11111" minlength="10" maxlength="10"><br>
+        </div>
+        <h3>Date</h3>
+        <input type="date" id="date">
+        <h3>Medical History</h3>
+        <div id="gender">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <br>
+        <div id="age">
+            <label for="Age">Age Group</label><br>
+            <input type="radio" id="age" name="common" value="kids">Kids(5-12 years)
+            <input type="radio" id="age" name="common" value="teenagers">Teenager(13-19 years)
+            <input type="radio" id="age" name="common" value="adult" checked>Adults(20-45 years)
+            <input type="radio" id="age" name="common" value="seniors">Senior Citizen(50 > years)
+
+
+        </div>
+        <br>
+        <h3>Disease history</h3>
+        <div id="history">
+            <input type="checkbox" id="history" value="pneumonia">Pneumonia<br>
+            <input type="checkbox" id="history" value="measles">Measles<br>
+            <input type="checkbox" id="history" value="Chicken Pox">Chicken Pox<br>
+            <input type="checkbox" id="history" value="Small Pox">Small Pox<br>
+            <input type="checkbox" id="history" value="Polio">Polio<br>
+            <input type="checkbox" id="history" value="nothing">Nothing<br>
+        </div>
+        <br>
+        <div id="others">
+            <label for="Others">Others</label><br>
+            <textarea name="others" id="Others" cols="50" rows="5" maxlength="140"></textarea>
+        </div>
+        <br>
+        <div>
+            <button type="submit" onclick="myFunction()">Submit</button>
+            <button type="reset">Reset</button>
+            
+            <p id="note"></p>
+        </div>
+        
+        
+    </form>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/SsZySkZ8bRo">
+    </iframe>
+
+    
+</body>
+</html>
