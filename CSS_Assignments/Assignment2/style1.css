@@ -1,0 +1,458 @@
+body {
+    background-color: rgb(4, 4, 20);
+    font-family: 'Inconsolata', monospace;
+}
+button {
+    background-color: honeydew;
+    color: black;
+    border-radius: 8px;
+    height: 50px;
+    width: 80px;
+    float: right;
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(19, 20, 44);
+    height: 80px;
+    margin: 2px white;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+label {
+    margin-left: 20px;
+}
+h1 img {
+    margin-top: 10px;
+    height: 60px;
+    width: 70px;
+    
+    
+}
+input {
+    border-radius: 10px;
+    width: 300px;
+
+
+}
+h3 {
+    margin: 20px;
+    background-color: rgb(5, 5, 27);
+    color: white;
+    border-radius: 10px;
+    height: 5vh;
+    width: 40vw;
+}
+.cbox {
+    margin: 20px;
+    width: auto;
+}
+#images {
+    float: right;
+    width:13vw;
+    height:20vw;
+}
+#images img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    float: left;
+    opacity: 50;
+    
+}
+#images img:hover {
+    transform: rotateY(180deg);
+}
+form {
+    margin: auto;
+    border: 3px solid greenyellow;
+    color: black;
+    border-radius: 10px;
+    width: 60vw;
+    height: 60vw;
+    background-color: gainsboro;
+
+}
+
+
+
+@media(max-width: 1200px)
+{
+ .form #form {
+     display: block;
+ }
+
+
+    input {
+    border-radius: 10px;
+    width: 400px;
+
+
+}
+h3 {
+    border-radius: 2px;
+}
+
+#container #images {
+    
+    display: inline;
+    /* margin-left: 5px; */
+    margin-bottom: 50px; 
+    float: none;
+    margin-left: 15px;
+}
+#container #images h2 {
+    margin-left: 20px;
+}
+#container #images img {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: none;
+    opacity: 50;
+    
+}
+
+.cbox {
+    margin-left: 5px;
+}
+
+form {
+        height: 100vh;
+        display: block;
+        overflow: auto;
+    }
+#images {
+    
+    width:40vw;
+    /* height:20vw; */
+}
+#images img {
+    display: inline;
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    float: left;
+    opacity: 50;
+    
+}
+#images img:hover {
+    transform: rotateY(180deg);
+}
+
+
+
+   
+}
+@media(max-width: 1080px)
+{
+    h1 {
+        font-size: 40px;
+    }
+    input {
+    border-radius: 10px;
+    width: 400px;
+
+
+}
+h3 {
+    margin: 20px;
+    background-color: rgb(5, 5, 27);
+    color: white;
+    border-radius: 10px;
+    height: 8vh;
+    width: 60vw;
+}
+#name , #date , #email , #phone_no {
+    display: block;
+}
+#studied , #course {
+    display: block;
+}
+
+form {
+        height: 100vh;
+        display: block;
+        overflow: auto;
+    }
+#images {
+    
+    width: 55vw;
+    /* height:20vw; */
+}
+#images img {
+    display: inline;
+    height: 100px;
+    width: 90px;
+    margin-right: 10px;
+    float: left;
+    opacity: 50;
+    
+}
+#images img:hover {
+    transform: rotateY(180deg);
+}
+
+
+
+   
+}
+@media(max-width: 882px)
+{
+    #container {
+        width: 98vw;
+        clear: both;
+        display: flex;
+        margin: 0px 10px 15px 10px;
+        white-space: nowrap;
+        
+    }
+
+    #name input,#email input,#phone_no input,#date input {
+        margin-left: 20px;
+        width: 45vw;
+    }
+    .form form #name , #phone_no , #date , #email {
+        display: block;
+    }
+    h3 {
+    
+    margin: 20px;
+    background-color: rgb(5, 5, 27);
+    color: white;
+    border-radius: 2px;
+    height: fit-content;
+    width: 50vw;
+}
+.cbox {
+    margin: 5px;
+}
+#studied label {
+    display:block;
+
+}
+
+#course {
+    display: block;
+}
+.form form #button button {
+    background-color: honeydew;
+    color: black;
+    border-radius: 8px;
+    height: 50px;
+    width: 80px;
+    float: left;
+    
+    margin-bottom: 0px;
+}
+#studied strong, #course strong{
+    margin: 40px;
+}
+    #logo {
+        height: 20px;
+        width: 50px;
+    }
+    h1 {
+        font-size: 30px;
+        height: fit-content;
+    }
+    input {
+    border-radius: 10px;
+    width: 400px;
+
+
+}
+#name , #date , #email , #phone_no {
+    display: block;
+}
+
+form {
+        height: 100vh;
+        display: block;
+        overflow: auto;
+    }
+#container #images {
+    
+    width: 55vw;
+    /* height:20vw; */
+}
+#container #images img {
+    display: inline;
+    height: 80px;
+    width: 70px;
+    margin-right: 10px;
+    float: left;
+    opacity: 50;
+    
+}
+#images img:hover {
+    transform: rotateY(180deg);
+}
+#studied ,#course {
+    display: block;
+    
+}
+#studied label {
+    
+    display: block;
+}
+#course label {
+    display: block;
+}
+
+
+
+
+
+   
+}
+
+@media(max-width: 411px) {
+    .form form {
+        width: 98vw;
+        display: block;
+        overflow: auto;
+        
+        
+    }
+    #container #images {
+        vertical-align: middle;
+        display: inline-block;
+        /* margin-left: 5px; */
+        margin-bottom: 450px; 
+        float: none;
+        margin-left: 15px;
+    }
+    #container #images img {
+        
+        display: block;
+        height: 120px;
+        width: 180px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+        float: none; 
+        opacity: 50;
+        
+    }
+    #container #images h2 {
+        margin-left: 52px;
+    }
+    
+    h3 {
+        width: 90vw;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding:150px rgb(5, 5, 27);
+    }
+    h3 #a {
+        height: auto;
+        padding-left: 30px rgb(5, 5, 27);
+    }
+    h3 #b {
+        height: 20px;
+    }
+    
+    #studied strong {
+        margin-top: 0px;
+        margin-left: 0px;
+    } 
+    #course strong {
+        margin-top: 0px;
+        margin-left: 0px;
+    } 
+    #studied ,#course {
+        display: block;
+        
+    }
+    #studied label {
+        
+        display: block;
+    }
+    #course label {
+        margin-left: 0px;
+        display: block;
+    }
+    #name input,#email input,#phone_no input,#date input {
+        width: 85vw;
+        margin-left: 5px;
+    }
+    #date1 {
+        margin-left: 5px;
+    }
+    #Education {
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+    #container {
+        
+        width: 98vw;
+        clear: both;
+        display: flex;
+        margin: 0px 10px 65px 10px;
+        white-space: nowrap;
+        
+        
+    }
+    #name ,#email ,#date ,#phone_no {
+        white-space: normal;
+    }
+    h1 {
+        border-radius: 5px;
+        height: 45px;
+        font-size: 28px;
+        /* text-align: center; */
+        margin-bottom: 5px;
+        text-anchor: start;
+        display: block;
+    }
+    h1 img {
+        height: 30px;
+        width: 30px;
+    }
+    #name {
+        display:block; 
+	width:90%; 
+	margin:auto; 
+    }
+    #email {
+        display:block; 
+	width:90%; 
+	margin:auto; 
+    }
+    #date {
+        display:block; 
+	width:90%; 
+	margin:auto; 
+    }
+    #phone_no {
+        display:block; 
+	width:90%; 
+	margin:auto; 
+    }
+
+    #images {
+        display: block;
+        width: 90vw;
+        margin: 10px 10px 10px 10px;
+        white-space: nowrap;
+    }
+    label {
+        margin-left: 5px;
+    }
+    #images img {
+        display: block;
+        margin-right: 5px;
+        white-space: nowrap;
+    }
+    #button button {
+        margin-left: 38vw;
+    }
+}

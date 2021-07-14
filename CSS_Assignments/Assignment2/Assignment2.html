@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <title>Pick a course</title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+<body>
+    <div class="form">
+        <form action="process.php">
+            <h1>Courses preparation
+                <img id ="logo" src="/books.png" alt="logo">
+            </h1>
+            
+            
+            <div id="container">
+                <div id="images">
+                    <h2><strong> Courses we offer</strong></h2>
+                    <img src="/js.png" alt="#">
+                    <img src="/sol.png" alt="#">
+                    <img src="/swift.png" alt="#">
+                    <img src="/go.png" alt="#">
+                </div>
+            </div>
+                <br>
+                <div id="name">
+                    <label for="name"><strong>Name :</strong></label>
+                    <input type="text" placeholder="e.g John Mclane" required><br>
+                </div>
+                <br>
+                <br>
+                <div id="email">
+                    <label for="email" ><strong>Email :</strong></label>
+                    <input type="email" placeholder="e.g yourname@website.com"><br>
+                </div>
+                <br>
+                <br>
+                <div id="phone_no">
+                    <label for="phone_no"><strong>Phone no. :</strong></label>
+                    <input type="tel" placeholder="00000 11111" minlength="10" maxlength="10"><br>
+                
+                
+                </div>
+                
+                <br>
+                <br>
+                <div id="date">
+                    <label for="date"><strong>Date :</strong></label>
+                    <input type="date" id="date1"><br>
+                </div>
+                <br>
+                <br>
+    
+            
+                        <div id="Education">
+                <label for="Education"><strong>Educataion :</strong></label>
+                <select id="Education">
+                    <option value="Under-Grad">Under-Grad</option>
+                    <option value="Post-Grad">Post-Grad</option>
+                    <option value="Junior_clg">Junior college</option>
+                    <option value="School">School</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div id="studied">
+                <h3 id = "a">Which Programming Languages do you know ?</h3>
+                <label for=""><input class="cbox" type="checkbox" id="studied1" value="Java"><strong>Java</strong></label>
+                <label for=""><input class="cbox" type="checkbox" id="studied2" value="C/C++"><strong>C/C++</strong></label>
+                
+                <label for=""><input class="cbox" type="checkbox" id="studied4" value="Python"><strong>Python</strong></label>
+                <label for=""><input class="cbox" type="checkbox" id="studied5" value="Others"><strong>Others</strong></label>
+                <label for=""><input class="cbox" type="checkbox" id="studied6" value="None"><strong>None</strong></label>
+                            </div>
+            <br>
+            <br>
+        <div id="course" class="cbox">
+            <h3 id="b">Which course do you prefer ?</h3>
+            <label for=""><input type="radio" class="cbox" id="course4" name="common" value="Solidity"><strong>Solidity</strong></label>
+            <label for=""><input type="radio" class="cbox" id="course2" name="common" value="Javascript"><strong>Javascript</strong></label>
+
+            <label for=""><input type="radio" class="cbox" id="course1" name="common" value="Swift"><strong>Swift</strong></label>
+            <label for=""><input type="radio" class="cbox" id="course3" name="common" value="GoLang" checked><strong>GoLang</strong></label>
+                        
+
+        </div>
+        <br>
+        <br>
+        <div id="button">
+            <button type="submit">Submit</button>
+        </div>
+        <br>
+
+
+
+
+        </form>
+    </div>
+</body>
+</html>
