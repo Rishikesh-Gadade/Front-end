@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 36);
+            /* align-items: center; */
+
+        }
+
+        .forms {
+            background-color: white;
+            color: black;
+            margin: auto;
+            width: 50vw;
+            height: 60vh;
+            border-radius: 25px;
+            border: solid rgb(110, 166, 204) 7px;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            display: grid;
+            /* align-self: flex-start; */
+            
+        }
+        #userid , #password {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            /* margin-bottom: 5%; */
+            margin-top: 5%;
+            border-radius: 3px;
+            /* outline: none; */
+            padding: 0px 0px 5px 5px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        #rem {
+            width: 2vw;
+            height: 2vh;
+        }
+        #validate button {
+            height: 5vh;
+            width: 10vw;
+            border-radius: 20px;
+            background: rgb(20, 20, 61);
+            border:1px solid white;
+            color: white;
+
+        }
+        #validate button:hover {
+            border:3px solid rgb(20, 20, 61);
+            color: rgb(20, 20, 61);
+            background-color: white;
+        }
+        #user,#pwd {
+            height: 5vh;
+            width: 30vw;
+            border: 1px solid white;
+            
+        }
+
+        #invalid {
+            text-align: center;
+            margin: auto;
+            height: 15vh;
+            width: 30vw;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            border: 2px solid rgb(110, 166, 204) ;
+            
+        }
+
+        #invalid button {
+            border-radius: 20px;
+            background: rgb(20, 20, 61);
+            border:1px solid white;
+            color: white
+        }
+
+        #invalid button:hover {
+            border:3px solid rgb(20, 20, 61);
+            color: rgb(20, 20, 61);
+            background-color: white;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1 id="header">Login</h1>
+    <div id="invalid" style="display: none;">
+        <p>Invalid Credentials</p>
+        <button type="button" onclick="reload()">Try again</button>
+    </div>
+    <form action="" class="forms" id="login">
+        <div id="userid">
+            <label for="userid">Enter User ID :<input type="text" id="user" placeholder="Username" ></label>
+        </div>
+        <div id="password">
+            <label for="password">Enter password :<input type="password" placeholder="abc@1234" id="pwd" ></label>
+        </div>
+        
+        <div id="remeber">
+            <label for="remeber"><input type="checkbox" id="rem" >Remember me</label>
+        </div>
+        <div id="validate">
+            <button type="button" onclick="validate()">Validate</button>
+        </div>
+
+        
+    </form>
+    
+    <script>
+        const form = document.getElementById('login')
+        const userid = document.getElementById('user');
+        const pass = document.getElementById('pwd');
+        const inval = document.getElementById('invalid');
+        function validate(){
+            if(userid.value !== 'Rishikesh' && pass.value !== 'password'){
+                
+                userid.value = '';
+                pass.value = '';
+                form.style.filter = 'blur(8px)';
+                // inval.style.filter = 'blur(0px)';
+                inval.style.display = 'block';
+                inval.style.filter = 'blur(0px)'
+                inval.style.z = '99999'
+                document.getElementById('header').style.filter = 'blur(8px)';
+
+            }
+            else{
+                window.location.assign("form.html");
+            }
+        }
+        function reload(){
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>

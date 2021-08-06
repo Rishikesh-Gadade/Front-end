@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(10, 10, 36);
+            /* align-items: center; */
+
+        }
+
+        .forms {
+            background-color: white;
+            color: black;
+            margin: auto;
+            width: 50vw;
+            height: 60vh;
+            border-radius: 25px;
+            border: solid rgb(110, 166, 204) 7px;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            display: grid;
+            /* align-self: flex-start; */
+            
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        #name , #email , #phone , #date {
+            border: none;
+            border-bottom: 1px solid #3a3a3a;
+            margin-top: 5%;
+            border-radius: 3px;
+            padding: 0px 0px 5px 5px;
+            
+        }
+
+        #submit {
+            height: 5vh;
+            width: 10vw;
+            border-radius: 20px;
+            background: rgb(20, 20, 61);
+            border:1px solid white;
+            color: white;
+        }
+
+        #submit:hover {
+            border:3px solid rgb(20, 20, 61);
+            color: rgb(20, 20, 61);
+            background-color: white;
+        }
+        #success {
+            text-align: center;
+            margin: auto;
+            height: 15vh;
+            width: 30vw;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            border: 2px solid rgb(110, 166, 204) ;
+            
+        }
+        #success button {
+            border-radius: 20px;
+            background: rgb(20, 20, 61);
+            border:1px solid white;
+            color: white
+        }
+        #success button:hover {
+            border:3px solid rgb(20, 20, 61);
+            color: rgb(20, 20, 61);
+            background-color: white;
+
+        }
+
+
+        #name,#phone,#email{
+            height: 5vh;
+            width: 30vw;
+        }
+        #country {
+            height: 5vh;
+            width: 15vw;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Add member</h1>
+    <div id="success" style="display: none;">
+        <p>Member Added successfully</p>
+        <button type="button" onclick="backtofirst()" >OK</button>
+    </div>
+    <form action="" class="forms" id="reg_form">
+        <div id="Name">
+            <label for="Name">Enter Name :<input type="text" id="name" placeholder="Name" ></label>
+        </div>
+        <div id="Email">
+            <label for="Email">Enter email id :<input type="email" placeholder="abc@gmail.com" id="email" ></label>
+        </div>
+        
+        <div id="Phone">
+            <label for="remeber">Enter mob no. :<input type="number" placeholder="10 digit number" id="phone" ></label>
+        </div>
+        <div id="Country">
+            <label for="Country">Country
+            <select id="country">
+                <option value="India">India</option>
+                <option value="USA" selected>USA</option>
+                <option value="England">England</option>
+                <option value="others">Others</option>
+            </select></label>
+        </div>
+        <div id="Date">
+            <label for="Date">Birth-date :<input id="date" type="date" ></label>
+        </div>
+        
+        <div id="Submit">
+            <button id="submit" type="button" onclick="add()">Add</button>
+        </div>
+
+        
+    </form>
+    <script>
+        var name1 = document.getElementById('name');
+        var email = document.getElementById('email');
+        var phone = document.getElementById('phone');
+        var date = document.getElementById('date');
+        var country = document.getElementById('country');
+        var reg_form = document.getElementById('reg_form');
+        var success = document.getElementById('success');
+        var now = new Date().getTime();
+        
+        function add(){
+            if( name1.value == "" ) {
+            alert( "Please provide your name!" );
+            name1.focus() ;
+            return false;
+         }
+         if( email.value == "" ) {
+            alert( "Please provide your Email!" );
+            email.focus() ;
+            return false;
+         }
+         if( phone.value == "" ) {
+            alert( "Please provide your Phone number!" );
+            phone.focus() ;
+            return false;
+         }
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         if( !email.value.match(mailformat)){
+             alert("Invalid Email address");
+             email.focus();
+             return false;
+         } 
+         var phone_val_ind = /^\d{10}$/;
+         var phone_val_usa_eng = /^\d{6}$/;
+        //  var phone_val_eng = /^\d{10}$/;
+        var name_val = /^[a-zA-Z ]+$/;
+        if(!name1.value.match(name_val)){
+            alert("Please provide a proper name !")
+             name1.focus();
+             return false;
+        }
+         if(country.value === "India"){
+            if(!phone.value.match(phone_val_ind)){
+            alert("Please provide a valid 10 digit number !")
+             phone.focus();
+             return false;
+         }
+
+         }
+         else{
+            if(!phone.value.match(phone_val_usa_eng)){
+            alert("Please provide a valid 6 digit number !")
+             phone.focus();
+             return false;
+         }
+         }
+         
+         if( inValidDate(date.value)){
+             alert("Please don't provide any future date!")
+             date.focus();
+             return false;
+             
+         }
+        reg_form.style.filter = 'blur(8px)';
+         // inval.style.filter = 'blur(0px)';
+        success.style.display = 'block';
+        success.style.filter = 'blur(0px)'
+        success.style.z = '99999'
+        document.getElementById('header').style.filter = 'blur(8px)';
+         
+        }
+        function backtofirst(){
+            window.location.assign('index.html');
+        }
+        function inValidDate(input_date){
+            var today = new Date(),
+                input_date = input_date.split("-");
+
+            input_date = new Date(input_date[0], input_date[1] - 1, input_date[2]);
+            console.log(today);
+                console.log(input_date);
+            return (today - input_date) < 0 ? true : false;
+}
+        
+
+    </script>
+    
+</body>
+</html>

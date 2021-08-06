@@ -1,0 +1,202 @@
+body {
+    height: 100vh;
+    display: block; 
+    align-items: center;
+    background: linear-gradient(to top left, #28b487, #7dd56f);
+    font-family: 'Roboto Mono', monospace;
+  }
+  #container{
+margin : 20px auto;
+background-color: white;
+height: 300px;
+width : 700px;
+border-radius: 5px;
+box-shadow: 0px 5px 15px 0px;
+position: relative;
+display: block;
+clear: both;
+overflow: visible;
+}
+#start{
+font-size: 1.5em;
+font-weight: bolder;
+word-break: break-all;
+width:170px;
+height:60px;
+border : 2px solid lightgrey;
+text-align: center;
+cursor: pointer;
+position: absolute;
+left:280px;
+top:50px;
+color : black;
+}
+#note {
+    text-align: center;
+    color: white;
+}
+#start:hover{
+border: 3px solid rgb(45, 143, 45);
+color : rgb(45, 143, 45);
+}
+#start p {
+    width: 700px;
+}
+
+#question{
+width:500px;
+height : 125px;
+position: absolute;
+right:100px;
+top:0;
+text-align: center;
+margin: auto;
+}
+#question p{
+margin : auto;
+padding : 15px;
+font-size: 1.25em;
+}
+
+#choices{
+width : 50vw; 
+text-align: center;
+position: absolute;
+/* right : 23%; */
+top : 125px;
+padding : 10px;
+margin: auto;
+}
+.choice{
+display: inline;
+text-align: center;
+
+border : 1px solid grey;
+border-radius: 5px;
+cursor: pointer;
+padding : 5px;
+}
+.choice:hover{
+border : 2px solid grey;
+font-weight: bold;
+}
+.qs button {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    border: solid white;
+    background-color: white;
+}
+
+.qs button:hover {
+    background-color: yellowgreen;
+    color: white;
+    
+}
+#scoreContainer{
+margin : 20px auto;
+background-color: white;
+opacity: 0.8;
+height: 300px;
+width : 700px;
+border-radius: 5px;
+box-shadow: 0px 5px 15px 0px;
+position: relative;
+display: none;
+}
+
+#scoreContainer p{
+position: absolute;
+display: block;
+width : 59px;
+height :59px;
+top:130px;
+left:325px;
+font-size: 1.5em;
+font-weight: bold;
+text-align: center;
+}
+#quiz {
+    display: block;
+    clear: both;
+    width: 700px;
+    text-align: center;
+}
+
+h1{
+color: white;
+text-align: center;
+font-family: 'Tourney', cursive;
+font-size: 50px;
+}
+#stopwatch {
+background-color: cornsilk;
+width: 10%;
+border-radius: 20px;
+height: 45px;
+font-size: 40px;
+float: right;
+left: 40px;
+color: rgb(81, 117, 27);
+text-align: center;
+}
+#reset {
+float: right;
+display: block;
+margin: auto;
+margin-top: 20px;
+width: 40%;
+height: 10%;
+left: 40%;
+/* background-color: blueviolet; */
+}
+#back {
+    float: left;
+display: block;
+margin: auto;
+
+margin-top: 20px;
+width: 40%;
+left: 40%;
+
+}
+
+#back button {
+    margin-top: 85%;
+height: 40px;
+float: right;
+display: block;
+margin-right: 5px;
+font-family: 'Roboto Mono', monospace;
+background-color: white;
+    color: rgb(15, 94, 22);
+    border: rgb(10, 102, 14) solid;
+    border-radius: 15px;
+}
+#reset button {
+    margin-top: 85%;
+    margin-left: 5px;
+    
+float: left;
+display: block;
+font-family: 'Roboto Mono', monospace;
+background-color: white;
+    color: rgb(15, 94, 22);
+    border: rgb(10, 102, 14) solid;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    height: 40px;
+}
+#submit {
+    margin-right: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+    color: rgb(15, 94, 22);
+    border: rgb(10, 102, 14) solid;
+}
+
+#reset button:hover,#back button:hover {
+background-color: rgb(79, 110, 32);
+border: honeydew solid;
+color: honeydew;
+}

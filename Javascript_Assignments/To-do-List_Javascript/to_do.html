@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee027c465e.js' crossorigin='anonymous'></script>
+    <title>To-do List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div id="instructions">
+        <h1>Personalized to-do list</h1>
+        <h3>Follow a schedule for a hassle-free day</h3>
+        <p>Click on the pencil to start assigning tasks.Click on 'X' to delete the task after completion</p>
+        
+    </div>
+    
+    <div class="row">
+        <div class="uinput">
+            <input type="text" placeholder="  New task...." id="inputtask">
+            <button id="add" onclick="createItem()" style='font-size:24px'><i class='fas fa-pencil-alt'></i></button>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="lists">
+            <ul class="taskitems">
+
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>

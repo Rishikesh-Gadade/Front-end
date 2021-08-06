@@ -1,0 +1,126 @@
+body {
+    background:linear-gradient(to top,rgb(76, 151, 141), rgb(109, 203, 226));
+    height: 100vh;
+    display: block;
+    
+}
+#instructions {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    /* height: 25vh; */
+    display: block;
+    
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3,p {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.uinput {
+    text-align: center;
+    display: block;
+}
+.uinput #inputtask {
+    width: 50vw;
+    height: 5vh;
+    display: inline;
+    border-radius: 20px;
+    border: rgb(36, 138, 116) 3px solid;
+    font-size: 20px;
+    
+}
+.uinput #inputtask:focus {
+    outline: none;
+}
+.uinput i {
+    color: rgb(109, 203, 226);
+}
+.uinput i:hover {
+    color: white;
+}
+.uinput button {
+    margin-top: auto;
+    height: 2em;
+    width: 2em;
+    display: inline;
+    border-radius: 50%;
+    background-color: rgb(36, 138, 116);
+    border: none;
+    transition: all 0.75s ease;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75 ease;
+        }
+
+.uinput button:hover {
+    color: white;
+    border: 3px solid white;
+    background: rgb(19, 13, 54);
+}
+
+ul {
+    text-align: left;
+    margin-top: 20px;
+}
+
+li {
+    list-style: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 600;
+    border: 2px solid #025f70;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #4EB9CD;
+    transition: all 0.75s ease;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75 ease;
+
+}
+
+li:hover {
+    background: #76CFE0;
+}
+
+li > button {
+    font-weight: normal;
+    background: none;
+    border: none;
+    float: right;
+    color: #025f70;
+    font-weight: 800;
+}
+
+li > button:hover {
+    color: white;
+}
+
+.remove {
+    display: none;
+}
+
+.appreciate {
+    background: white !important;
+    text-align: center;
+    color: yellowgreen;
+}
+
+.score {
+    float: right;
+    height: 10vh;
+    width: 7vw;
+    background: white;
+    border-radius: 50%;
+    border: yellowgreen 2px solid;
+    text-align: center;
+    color: yellowgreen;
+}

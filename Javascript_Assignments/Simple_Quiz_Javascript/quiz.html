@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Tourney:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quiz on India
+    <div id="stopwatch">00:00</div>
+    </h1>
+    <div id="container">
+        <div id="start">Start Quiz?   
+        </div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="choices">
+                <div id="A" class="choice" onclick="checkAnswer('A')"></div>
+                <div id="B" class="choice" onclick="checkAnswer('B')"></div>
+                <div id="C" class="choice" onclick="checkAnswer('C')"></div>
+                <div id="D" class="choice" onclick="checkAnswer('D')"></div>
+            </div>
+            <div id="progress"></div>
+            <div id="scoreContainer" style="display: none"></div> 
+            <div id="buttons">
+                
+                <div id="back">
+                    
+                    <button type = "button" onclick="back()"><<</button>
+                    <button id ="submit" type="button" onclick="submit()">Submit</button>
+                </div>
+                <div id="reset">
+                    <button id ="next" type="button" onclick="next()">>></button>
+                    <button type="button" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div id="note">
+        <div id = "qs" class="qs" style="display: none;">
+            <button id="0" type="button" onclick="traverse(0)">1</button>
+            <button id="1" type="button" onclick="traverse(1)">2</button>
+            <button id="2" type="button" onclick="traverse(2)">3</button>
+            <button id="3" type="button" onclick="traverse(3)">4</button>
+            <button id="4" type="button" onclick="traverse(4)">5</button>
+            <button id="5" type="button" onclick="traverse(5)">6</button>
+            <button id="6" type="button" onclick="traverse(6)">7</button>
+            <button id="7" type="button" onclick="traverse(7)">8</button>
+            <button id="8" type="button" onclick="traverse(8)">9</button>
+            <button id="9" type="button" onclick="traverse(9)">10</button>
+        </div>
+        <p>You have 10 minutes to complete the test</p>
+        <p>No negative marking. Attempt all the questions </p>
+        <h2>Best of Luck!!!</h2>
+    </div>
+    
+    
+    <script src="quiz.js"></script>
+    
+</body>
+</html>

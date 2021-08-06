@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+         body {
+        height: 100vh;
+        display: block;
+        /* align-items: center; */
+        background: linear-gradient(to top left, #673585, #e3adf3);
+      }
+      header h1 {
+          color: white;
+          text-align: center;
+          font-family: 'Anton', sans-serif;
+          font-size: 50px;
+      }
+
+      form {
+          margin: auto;
+          z-index: 100;
+          border-color: white;
+          border-radius: 10px;
+          border-collapse: collapse;
+          height: 60%;
+          width: 70%;
+          border-style: solid;
+          border-width: 10px;
+          align-items: center;
+      }
+
+      form #label1 {
+          vertical-align: middle;
+          margin-left: 40px;
+          text-align: center;
+          margin: auto;
+          color: white;
+          font-size: 30px;
+          margin-top: 10px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #ip {
+          height: 50px;
+          width: 60vw;
+          border-radius: 15px;
+          border-color: white;
+          font-size: 30px;
+      }
+      .inp {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+      }
+      .inp button {
+        margin-top: 20px;
+        margin-left: 43%;
+        background-color: white;
+        border-radius: 20px;
+        border-color: white;
+        color: black;
+        height: 45px;
+        width: 150px;
+        font-size: 30px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checking Data-types in JavaScript</h1>
+    </header>
+    <br>
+    <br>
+    <form action="">
+        <div class="inp">
+            <label id = "label1" for="">Input:<input id = "ip" type="text"></label><br>
+            <button type="submit" onclick="checkDatatype()">Check</button>
+
+        </div>
+                
+    </form>
+    <script>
+        function checkDatatype(){
+            let inp = document.getElementById('ip').value;
+            if(!isNaN(parseInt(inp))) {
+                alert ("This is a number!!!");
+            }
+            else{
+                if(inp === "true" ||inp === "True" ||inp === "false" ||inp === "False" ){alert ("This is a boolean!!!");}
+                else{ alert("This is a string!!!!");}
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <title>String Reversal</title>
+    
+</head>
+<style>
+    body {
+        background: linear-gradient(to top left,rgb(156, 156, 41), rgb(247, 247, 146));
+        height: 100vh;
+        display: block;
+        align-items: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        color: white;
+    }
+    form {
+        margin: auto;
+          z-index: 100;
+          border-color: white;
+          border-radius: 10px;
+          border-collapse: collapse;
+          height: 60%;
+          width: 70%;
+          border-style: solid;
+          border-width: 10px;
+          align-items: center;
+        
+    }
+    .input {
+        width: 55vw;
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    .output {
+        font-size: 40px;
+        width: 55vw;
+        margin-left: 50px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    .buttons {
+        margin-top: 50px;
+        margin-left: 40%;
+        
+    }
+    input {
+        height: 45px;
+        width: 40vw;
+        border-radius: 10px;
+        border: white;
+    }
+    .buttons button {
+        height: 40px;
+        width: 100px;
+        
+        border: solid white;
+        /* border-radius: 50%; */
+        
+        margin: auto;
+        align-items: center;
+        background-color: white;
+        color: rgb(62, 87, 25);
+        font-family: 'Acme', sans-serif;
+        font-size: 20px;
+    }
+    .buttons button:hover {
+    color: white;
+    background: rgb(77, 99, 33);
+}
+</style>
+<body>
+    <h1>String Reversal</h1>
+    <form action="">
+        <div class="input">
+            <label for="input">Input: <input type="text" id="input1"></label>
+        </div>
+        <br>
+        <div class="output">
+            <label for="output">Reversed: <output id="output1"></output></label>
+        </div>
+        <div class="buttons">
+            <button type="button" id="submit" onclick="check()">Submit</button>
+            <button id="clear" onclick="clr()">Clear</button>
+        </div>
+    </form>
+    <script>
+        function check(){
+            let x = document.getElementById('input1').value;
+            var reversed = "";
+            if(x.length === 0){
+                alert("String is empty ")
+            }
+            else{for(var i = x.length - 1;i>=0;i--){
+                reversed += x[i];
+            }
+            
+            document.getElementById('output1').value = reversed;
+            // alert("String is reversed");
+        }
+    }
+            
+
+        function clr(){
+            document.getElementById('input1').value = "";
+        }
+    </script>
+    
+</body>
+</html>
